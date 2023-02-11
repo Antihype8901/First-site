@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="style.css">
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/> -->
+    <title>English courses</title>
+</head>
+<body>
+    <header class="header">
+    <div class="container">
+        <h1 class="h1">Язык Успеха</h1>
+    </div>
+    </header>
+    <section class="about">
+        <div class="info">
+            <div class="container">
+                <div class="about_grid">
+                    <div class="about_grid-item">
+                        <h4 class="about_h4">5</h4>
+                        <h5 class="about_h5">лет</h5>
+                        <p class="about_p">на рынке</p>
+                    </div>
+                    <div class="about_grid-item">
+                        <h4 class="about_h4">1000</h4>
+                        <h5 class="about_h5">людей</h5>
+                        <p class="about_p">довольны результатом</p>
+                    </div>
+                    <div class="about_grid-item">
+                        <h4 class="about_h4">30</h4>
+                        <h5 class="about_h5">работников</h5>
+                        <p class="about_p">с высокой квалификацией</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2 class="text_h2 project_h2">Самые популярные курсы</h2> 
+            <div class="about_flex">
+                <div class="about_flex-item">
+                    <img class="project-img" src="img/generaleng2.jpg" alt="pictureflex1">
+                    <div class="rectangle"></div>
+                    <h3 class="text_h3 project_h3">Общий английский</h3>
+                        <p class="text-p project-p">Общий английский - это уникальная программа для изучающих английский язык, 
+                            основанная на темах из повседневной жизни и тренировкой необходимых языковых навыков.</p>
+                </div>
+                <div class="about_flex-item">
+                    <img class="project-img project-img2" src="img/listening.jpg" alt="pictureflex1">
+                    <div class="rectangle"></div>
+                    <h3 class="text_h3 project_h3">Прокачка аудирования</h3>
+                        <p class="text-p project-p">После прохождения данного курса, вы сможете понимать носителей, вне зависимости 
+                            от тембра голоса и акцента. Выучишь много новых крутых слов и выражений на каждый день.</p>
+                </div>
+                <div class="about_flex-item">
+                    <img class="project-img project-img3" src="img/interview2.jpg" alt="pictureflex1">
+                    <div class="rectangle"></div>
+                    <h3 class="text_h3 project_h3">Для собеседования</h3>
+                        <p class="text-p project-p">После прохождения данного курса вы получите универсальные знания английского, 
+                            которые пригодятся в любых ситуациях: от дружеской беседы до деловой переписки.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="rectangle-orange">
+        <div class="container-2">
+            <div class="rect-title">
+                <div class="rect-items-text">
+                    <div class="text_rectang"> Вводный урок — бесплатно!</div>
+                    <div class="text_rectang_h3">Познакомьтесь со своим будущим преподавателем.</div>
+                    <div class="text_rectang_h3-2">Кроме того, вы узнайте свой уровень английского.</div>
+                </div>
+                <button type = "custom-btn" id="custom-btn" onclick=alerted();changetext();>Получить урок!</button>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="container">
+            <div id="teachers">Список преподавателей: </div>
+            <div id="spisokteach"></div>
+            <div id="graduates">Список наших выпускников: </div>
+            <div id="listgrad"></div>
+            <div class="main_form">
+                <div class="title-price">Расчёт стоимости:</div>
+                <form>
+                    <div class="form-group">
+                        <label for="type-course">Выберете курс по своей теме: </label>
+                        <select class="form-control" id="type-course">
+                            <option value="0">Выберете курс</option>
+                            <option value="1">Аудирование и разговор</option>
+                            <option value="2">Для путешествия</option>
+                            <option value="3">Для сдачи экзамена</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="type-teacher">Какой преподаватель вам нужен:</label>
+                        <select class="form-control" id="type-teacher">
+                            <option value="0">Выберите преподавателя</option>
+                            <option value="1">Носитель языка</option>
+                            <option value="2">Не носитель, но с опытом более 12 лет.</option>
+                            <option value="3">Не носитель, но с опытом более от 1 - 6 лет.</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="number-sessions">Количество занятий:</label>
+                        <select class="form-control" id="number-sessions">
+                            <option value="0">Выберите кол-во занятий</option>
+                            <option value="1">1</option>
+                            <option value="2">20</option>
+                            <option value="3">30</option>
+                            <option value="4">40</option>
+                            <option value="5">50</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="total-price">Итоговая цена в рублях: </label>
+                        <input type="text" class="form-control" id="total-price" readonly>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- jquery -->
+    <script src="libs/jquery/jquery-3.6.2.min.js"></script>
+    <script>
+            var $course = $('#type-course'),
+            $dir = $('#type-teacher'),
+            $num = $('#number-sessions'),
+            $tot = $('#total-price'),
+            prices = {
+                1: { // аудирование и разговор
+                    // преподаватель: { номер_кол-ва занятий: цена, }
+                    1: {1: 1300, 2: 24000, 3: 36000, 4: 50000, 5: 60000},
+                    2: {1: 1100, 2: 20000, 3: 30000, 4: 45000, 5: 50000},
+                    3: {1: 900, 2: 18000, 3: 29000, 4: 40000, 5: 45000}
+                },
+                2: {//Для путешествия
+                    // преподаватель: { номер_кол-ва занятий: цена, }
+                    1: {1: 1500, 2: 24000, 3: 36000, 4: 50000, 5: 60000},
+                    2: {1: 1400, 2: 22000, 3: 38000, 4: 45000, 5: 50000},
+                    3: {1:1000, 2: 19000, 3: 29000, 4: 40000, 5: 45000}
+                },
+                3: {//для сдачи экзамена
+                    // преподаватель: { номер_кол-ва занятий: цена, }
+                    1: {1: 1300, 2: 24000, 3: 36000, 4: 50000, 5: 60000},
+                    2: {1: 1100, 2: 20000, 3: 30000, 4: 45000, 5: 50000},
+                    3: {1: 1000, 2: 18000, 3: 29000, 4: 40000, 5: 45000}
+                },
+            };
+
+        function update() {
+            var course = $course.val(); // значение курса
+            var dir = $dir.val(); // значение преподавателя
+            var num = $num.val(); // значение кол-ва занятий
+            $tot.val(prices[course] && prices[course][dir] && prices[course][dir][num]);
+        }
+
+        // слушать события обновления значений
+        $course.on('change', update);
+        $dir.on('change', update);
+        $num.on('change', update);
+    </script>
+
+    <script>
+        let changebutton=false;
+        function changetext(){
+            if (changebutton==false){
+                document.getElementById("custom-btn").innerHTML = "Нажали!";
+                changebutton=true;
+            }else{
+                document.getElementById("custom-btn").innerHTML = "Получить урок!";
+                changebutton=false;
+            }
+        }
+        alerted=() =>alert("Вы нажали на кнопку!\nЭто линейная функция :)");
+        
+        let stringg="";
+        function printArrayElements(element, index, array)
+        {
+            if (element['name'] !="Прокофьев Михаил Евгеньевич")
+            {
+                stringg+=(index+1+') '+element['name']+"   "+"<br>");
+            };
+        }
+        let ar=[{name:"Лебедева Амина Максимовна"},{name:"Смирнов Михаил Гордеевич"},{name:"Захарова Стефания Артёмовна"},{name:"Белов Мирон Александрович"},{name:"Сергеева Зоя Даниловна"},{name:"Миронова Милана Тимуровна"},{name:"Дьяконов Эмиль Ильич"},{name:"Прокофьев Михаил Евгеньевич"}];
+        ar.forEach(printArrayElements);
+        document.getElementById('spisokteach').innerHTML =stringg;
+        teachers.style.cssText =`font-size: 55px;color:red;`;
+        
+        let ar2=[{name:"Исаева Алиса Фёдоровна"},{name:"Дегтярев Марк Романович"},{name:"Кузьмин Тимофей Глебович"},{name:"Сергеев Глеб Кириллович"},{name:"Горелова Ксения Львовна"},{name:"Гаврилов Максим Михайлович"}];
+        
+        let string2="";
+        ar2.map((element,index2) =>{
+            string2+=(index2+1+') '+element['name']+"<br>");
+        });
+        document.getElementById('listgrad').innerHTML =string2;
+     </script> 
+</body>
+</html>
